@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+
+
+.bot-container {
+  position:fixed;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fc00fc10;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(254, 253, 253, 0.5);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  margin: 100px auto;
+  text-align: center;
+}
+
+.bot-illustration {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 0;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+}
+
+.bot-illustration.eating {
+  animation: eat 1s infinite alternate;
+}
+
+@keyframes eat {
+  0% { transform: translateX(-50%) scale(1) rotate(0deg); }
+  100% { transform: translateX(-50%) scale(1.15) rotate(10deg); }
+}
+
+h2 {
+  color: rgb(183, 7, 242);
+  margin-top: 200px;
+}
+
+.upload-section input[type="file"] {
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+}
+
+.query-box {
+  width: 90%;
+  padding: 10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  background-color: #bf08f2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #f24bce;
+}
+
+/* Example for a container that fills half the screen */
+.half-screen-container {
+  width: 50vw;   /* 50% of viewport width */
+  height: 100vh;  /* 100% of viewport height */
+  overflow: hidden;
+  position: fixed;
+}
+
+/* Make the image fill the container and keep its aspect ratio */
+.half-screen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' if you want the whole image visible */
+  display: block;
+}
