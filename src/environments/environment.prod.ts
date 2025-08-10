@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-  apiBaseUrl: 'https://dw-services.onrender.com'  // Your Render API URL
+  // production: true,
+  url: process.env['NG_APP_BASE_URL']  // Your Render API URL
 };
